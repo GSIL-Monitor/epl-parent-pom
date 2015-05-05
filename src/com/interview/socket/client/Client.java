@@ -24,7 +24,7 @@ public class Client
 
       System.out.println("Try to Connect to 127.0.0.1:10000");
 
-      socket = new Socket("127.0.0.1", 10000);
+      socket = new Socket("127.0.0.1", 10001);
 
       System.out.println("The Server Connected!");
 

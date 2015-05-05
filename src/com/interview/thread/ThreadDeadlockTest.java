@@ -1,7 +1,7 @@
 package com.interview.thread;
 
 /**
- * JavaÏß³Ì£º²¢·¢Ğ­×÷-ËÀËø
+ * Javaçº¿ç¨‹ï¼šå¹¶å‘åä½œ-æ­»é”
  * 
  * @author Administrator 2009-11-4 22:06:13
  */
@@ -12,13 +12,11 @@ public class ThreadDeadlockTest {
     MyThread t2 = new MyThread(dead, 3, 4);
     MyThread t3 = new MyThread(dead, 5, 6);
     MyThread t4 = new MyThread(dead, 7, 8);
-
     t1.start();
     t2.start();
     t3.start();
     t4.start();
   }
-
 }
 
 class MyThread extends Thread {
@@ -48,9 +46,9 @@ class DeadlockRisk {
 
   public int read() {
     synchronized (resourceA) {
-      System.out.println("read():" + Thread.currentThread().getName() + "»ñÈ¡ÁËresourceAµÄËø£¡");
+      System.out.println("read():" + Thread.currentThread().getName() + "è·å–äº†resourceAçš„é”ï¼");
       synchronized (resourceB) {
-        System.out.println("read():" + Thread.currentThread().getName() + "»ñÈ¡ÁËresourceBµÄËø£¡");
+        System.out.println("read():" + Thread.currentThread().getName() + "è·å–äº†resourceBçš„é”ï¼");
         return resourceB.value + resourceA.value;
       }
     }
@@ -58,9 +56,9 @@ class DeadlockRisk {
 
   public void write(int a, int b) {
     synchronized (resourceB) {
-      System.out.println("write():" + Thread.currentThread().getName() + "»ñÈ¡ÁËresourceBµÄËø£¡");
+      System.out.println("write():" + Thread.currentThread().getName() + "è·å–äº†resourceBçš„é”ï¼");
       synchronized (resourceA) {
-        System.out.println("write():" + Thread.currentThread().getName() + "»ñÈ¡ÁËresourceAµÄËø£¡");
+        System.out.println("write():" + Thread.currentThread().getName() + "è·å–äº†resourceAçš„é”ï¼");
         resourceA.value = a;
         resourceB.value = b;
       }
