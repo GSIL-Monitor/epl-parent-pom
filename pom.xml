@@ -31,7 +31,7 @@
     <!-- 编译时的编码 -->
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-      <!--  本地jar目录 -->
+    <!--  本地jar目录 -->
     <local.jar.dir>${basedir}/../epl-parent-pom/lib</local.jar.dir>
   </properties>
 
@@ -147,7 +147,7 @@
         <!--本地jar的路径,相对或者绝对都可以-->
         <systemPath>${local.jar.dir}\pinyin4j-1.1.0.jar</systemPath>
       </dependency>
-      
+
       <!-- 判断文件编码格式   -->
       <dependency>
         <groupId>cpdetector</groupId>
@@ -157,7 +157,7 @@
         <!--本地jar的路径,相对或者绝对都可以-->
         <systemPath>${local.jar.dir}\cpdetector_1.0.10.jar</systemPath>
       </dependency>
-      
+
       <dependency>
         <groupId>jargs</groupId>
         <artifactId>jargs</artifactId>
@@ -176,6 +176,13 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>5.1.22</version>
+      </dependency>
+
+      <!-- PostgreSQL -->
+      <dependency>
+        <groupId>postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>8.4-702.jdbc3</version>
       </dependency>
 
       <!-- DB Driver End  -->
@@ -245,28 +252,28 @@
         <version>1.3</version>
       </dependency>
 
-       <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.1</version>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.1</version>
+      </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
-    <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.1</version>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.1</version>
+      </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-    <dependency>
-      <groupId>commons-fileupload</groupId>
-      <artifactId>commons-fileupload</artifactId>
-      <version>1.3.2</version>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+      <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.3.2</version>
+      </dependency>
 
       <dependency>
         <groupId>commons-beanutils</groupId>
@@ -279,7 +286,7 @@
         <artifactId>commons-email</artifactId>
         <version>1.1</version>
       </dependency>
-      
+
       <!-- 公式运算  -->
       <dependency>
         <groupId>commons-jexl</groupId>
