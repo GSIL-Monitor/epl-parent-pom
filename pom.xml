@@ -20,8 +20,8 @@
   <modules>
     <module>../epl-platform-framework</module>
     <!-- <module>../epl-platform-common</module> -->
-    <module>../epl-etl-jar</module>
-    <module>../epl-edw-web</module>
+    <module>../epl-gateway-etl</module>
+    <module>../epl-gateway-web</module>
   </modules>
 
   <properties>
