@@ -39,7 +39,7 @@
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     
     <!-- JDK版本号 -->
-    <jdk.version>1.5</jdk.version>
+    <jdk.version>1.6</jdk.version>
     <!-- spring版本号 -->
     <spring.version>4.0.2.RELEASE</spring.version>
     <!-- mybatis版本号 -->
@@ -144,7 +144,7 @@
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
-        <version>7.0</version>
+        <version>6.0</version>
       </dependency>
 
 
