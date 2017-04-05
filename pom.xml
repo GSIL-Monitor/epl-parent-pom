@@ -17,12 +17,14 @@
     <connection>scm:svn:http://svncode.cnsuning.com/svn/vgs-lifesquare/trunk/${project.name}</connection>
   </scm>
 
+  <!-- Maven 仓库  -->
   <repositories>
     <repository>
       <id>code_repo</id>
-      <url>http://192.168.70.107:8081/nexus/content/repositories/public/</url>
+      <url>http://maven.oschina.net/content/groups/public/</url>
     </repository>
   </repositories>
+
 
   <modules>
     <module>../epl-platform-framework</module>
@@ -37,14 +39,15 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- 编译时的编码 -->
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-    
+
     <!-- JDK版本号 -->
     <jdk.version>1.6</jdk.version>
     <!-- spring版本号 -->
     <spring.version>4.0.2.RELEASE</spring.version>
+    <aspectj.version>1.5.4</aspectj.version>
     <!-- mybatis版本号 -->
     <mybatis.version>3.2.6</mybatis.version>
-    
+
     <!--  本地jar目录 -->
     <local.jar.dir>${basedir}/../epl-parent-pom/lib</local.jar.dir>
   </properties>
@@ -195,7 +198,7 @@
       <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.22</version>
+        <version>5.0.4</version>
       </dependency>
 
       <!-- PostgreSQL -->
@@ -241,18 +244,18 @@
         <version>1.3.4</version>
       </dependency>
 
+
+      <!-- AOP aspectj  -->
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjrt</artifactId>
-        <version>1.5.4</version>
+        <version>${aspectj.version}</version>
       </dependency>
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjweaver</artifactId>
-        <version>1.5.4</version>
+        <version>${aspectj.version}</version>
       </dependency>
-
-
 
       <!-- spring核心包 -->
       <dependency>
@@ -387,7 +390,7 @@
         <groupId>commons-codec</groupId>
         <artifactId>commons-codec</artifactId>
         <version>1.5</version>
-      </dependency> 
+      </dependency>
 
       <dependency>
         <groupId>commons-beanutils</groupId>
@@ -483,6 +486,19 @@
         <version>1.2</version>
       </dependency>
 
+      <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.2</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache-core -->
+      <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache-core</artifactId>
+        <version>2.4.8</version>
+      </dependency>
 
       <!-- 日志文件管理包 -->
       <!-- logback+slf4j start -->
