@@ -143,7 +143,7 @@
       </dependency>
 
 
-      <!-- 导入java ee jar 包 -->
+      <!-- 导入Java EE jar 包 -->
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
@@ -200,7 +200,6 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>5.0.4</version>
       </dependency>
-
       <!-- PostgreSQL -->
       <dependency>
         <groupId>postgresql</groupId>
@@ -209,6 +208,22 @@
       </dependency>
 
       <!-- DB Driver End  -->
+
+
+      <!-- dbcp 数据库连接池  -->
+      <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+
+      <!-- c3p0 连接池 -->
+      <dependency>
+        <groupId>c3p0</groupId>
+        <artifactId>c3p0</artifactId>
+        <version>0.9.1.2</version>
+      </dependency>
+
 
       <!--  Struts2  Start -->
       <dependency>
@@ -245,25 +260,12 @@
       </dependency>
 
 
-      <!-- AOP aspectj  -->
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjrt</artifactId>
-        <version>${aspectj.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjweaver</artifactId>
-        <version>${aspectj.version}</version>
-      </dependency>
-
       <!-- spring核心包 -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
@@ -279,13 +281,11 @@
         <artifactId>spring-tx</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
@@ -296,32 +296,43 @@
         <artifactId>spring-aop</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context-support</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      
+      <!-- AOP aspectj  -->
+      <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>${aspectj.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>${aspectj.version}</version>
+      </dependency>
 
-      <!-- mybatis核心包 -->
+      <!-- mybatis-spring适配器    -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+
+      <!-- mybatis ORM框架   -->
       <dependency>
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis</artifactId>
         <version>${mybatis.version}</version>
       </dependency>
 
-      <!-- mybatis/spring包 -->
-      <dependency>
-        <groupId>org.mybatis</groupId>
-        <artifactId>mybatis-spring</artifactId>
-        <version>1.2.2</version>
-      </dependency>
 
 
 
@@ -354,13 +365,6 @@
       </dependency>
 
       <!-- JSON -->
-
-      <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
-      <dependency>
-        <groupId>commons-dbcp</groupId>
-        <artifactId>commons-dbcp</artifactId>
-        <version>1.2.2</version>
-      </dependency>
 
 
       <!-- commons start  -->
@@ -402,6 +406,13 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-email</artifactId>
         <version>1.1</version>
+      </dependency>
+      
+      <!-- Email -->
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.2</version>
       </dependency>
 
       <!-- 公式运算  -->
@@ -486,14 +497,8 @@
         <version>1.2</version>
       </dependency>
 
-      <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
-      <dependency>
-        <groupId>javax.mail</groupId>
-        <artifactId>mail</artifactId>
-        <version>1.4.2</version>
-      </dependency>
 
-      <!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache-core -->
+      <!-- 缓存 -->
       <dependency>
         <groupId>net.sf.ehcache</groupId>
         <artifactId>ehcache-core</artifactId>
@@ -526,7 +531,6 @@
         <version>2.5.16</version>
       </dependency>
       <!-- logback+slf4j  end  -->
-
 
 
       <!-- 单元测试    -->
