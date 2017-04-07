@@ -27,8 +27,9 @@
 
 
   <modules>
+    <module>../epl-platform-core</module> 
     <module>../epl-platform-framework</module>
-    <!-- <module>../epl-platform-common</module> 
+    <!-- 
     <module>../epl-gateway-etl</module>
     <module>../epl-gateway-web</module> -->
   </modules>
@@ -128,12 +129,12 @@
     <dependencies>
       <dependency>
         <groupId>com.soak</groupId>
-        <artifactId>framework</artifactId>
+        <artifactId>core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>com.soak</groupId>
-        <artifactId>common</artifactId>
+        <artifactId>framework</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
