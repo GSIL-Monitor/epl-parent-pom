@@ -312,8 +312,8 @@
         <artifactId>javassist</artifactId>
         <version>3.13.0-GA</version>
       </dependency>
-      
-      
+
+
       <!-- JSON -->
       <!-- spring注解制定jackson做json数据转换 见MappingJacksonHttpMessageConverter类 的ObjectMapper -->
       <dependency>
@@ -423,7 +423,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-ftp</artifactId>
-        <version>1.4.0</version>
+        <version>1.6.4</version>
       </dependency>
       <!-- ftp end  -->
 
