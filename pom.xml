@@ -22,12 +22,12 @@
   -->
 
   <distributionManagement>
-      <repository>
-        <id>ebi</id>
-        <name>www.ebi.ac.uk</name>
-        <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public/</url>
-      </repository>
-      
+    <repository>
+      <id>ebi</id>
+      <name>www.ebi.ac.uk</name>
+      <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public/</url>
+    </repository>
+
     <snapshotRepository>
       <id>nexus-snapshots</id>
       <name>Internal Snapshot Repository</name>
@@ -88,6 +88,14 @@
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
         <version>6.0</version>
+      </dependency>
+
+     
+      <!-- 注解  -->
+      <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0</version>
       </dependency>
 
 
