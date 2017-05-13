@@ -148,7 +148,7 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>5.0.4</version>
       </dependency>
-      <!-- PostgreSQL -->
+      <!-- PostgreSQL  8.4-702.jdbc3   9.1-901.jdbc3  -->
       <dependency>
         <groupId>postgresql</groupId>
         <artifactId>postgresql</artifactId>
