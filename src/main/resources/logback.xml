@@ -3,7 +3,7 @@
 
   <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
   <property name="LOG_HOME" value="d:/logs" />
-  <property name="APP_NAME" value="myApp" />
+  <property name="APP_NAME" value="etl" />
   <property name="maxHistory" value="30" />    <!-- 文件历史数 -->
   <property name="totalSizeCap" value="10G" />    <!-- 限制日志文件大小，超出之后会先删除较旧的日志  -->
 
@@ -29,7 +29,7 @@
   <!-- 时间滚动输出 level为 DEBUG 日志 -->
   <appender name="file-debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <Encoding>UTF-8</Encoding>
-    <File>${LOG_HOME}/${APP_NAME}.debug.log</File>
+    <File>${LOG_HOME}/${APP_NAME}.debug</File>
     <!-- 日志级别限制 只记录级别为DEBUG的日志内容 -->
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
       <level>DEBUG</level>
@@ -37,7 +37,7 @@
       <onMismatch>DENY</onMismatch>
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <FileNamePattern>${LOG_HOME}/${APP_NAME}.debug-%d{yyyy-MM-dd}-%i.log.gz</FileNamePattern>
+      <FileNamePattern>${LOG_HOME}/${APP_NAME}.debug-%d{yyyy-MM-dd}-%i.gz</FileNamePattern>
       <MaxHistory>${maxHistory}</MaxHistory>
       <totalSizeCap>${totalSizeCap}</totalSizeCap>  
       <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -52,14 +52,14 @@
   <!-- 时间滚动输出 level为 INFO 日志 -->
   <appender name="file-info" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <Encoding>UTF-8</Encoding>
-    <File>${LOG_HOME}/${APP_NAME}.info.log</File>
+    <File>${LOG_HOME}/${APP_NAME}.info</File>
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
       <level>INFO</level>
       <onMatch>ACCEPT</onMatch>
       <onMismatch>DENY</onMismatch>
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <FileNamePattern>${LOG_HOME}/${APP_NAME}.info-%d{yyyy-MM-dd}-%i.log.gz</FileNamePattern>
+      <FileNamePattern>${LOG_HOME}/${APP_NAME}.info-%d{yyyy-MM-dd}-%i.gz</FileNamePattern>
       <MaxHistory>${maxHistory}</MaxHistory>
       <totalSizeCap>${totalSizeCap}</totalSizeCap>  
       <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -75,14 +75,14 @@
   <!-- 时间滚动输出 level为 ERROR 日志 -->
   <appender name="file-error" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <Encoding>UTF-8</Encoding>
-    <File>${LOG_HOME}/${APP_NAME}.error.log</File>
+    <File>${LOG_HOME}/${APP_NAME}.error</File>
     <filter class="ch.qos.logback.classic.filter.LevelFilter">
       <level>ERROR</level>
       <onMatch>ACCEPT</onMatch>
       <onMismatch>DENY</onMismatch>
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <FileNamePattern>${LOG_HOME}/${APP_NAME}.error-%d{yyyy-MM-dd}-%i.log.gz</FileNamePattern>
+      <FileNamePattern>${LOG_HOME}/${APP_NAME}.error-%d{yyyy-MM-dd}-%i.gz</FileNamePattern>
       <MaxHistory>${maxHistory}</MaxHistory>
       <totalSizeCap>${totalSizeCap}</totalSizeCap>  
       <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
